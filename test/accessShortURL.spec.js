@@ -13,6 +13,7 @@ describe('accessShortURL Test', function () {
   let shortUrl = ''
   before(async () => {
     // 테스트 전 Data 준비
+    await URL.remove({})
     await new URL({
       originUrl,
       shortUrl: nanoId(9)
