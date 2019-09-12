@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
   try {
     const result = await new URL({
       originUrl: url,
-      shortUrl: nanoId(10)
+      shortUrl: nanoId(9)
     }).save()
     return res.status(201).json({
       url: `http://localhost:3000/${result.shortUrl}`
