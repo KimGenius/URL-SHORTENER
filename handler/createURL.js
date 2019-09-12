@@ -4,8 +4,13 @@ const URL = require('../model/url')
 
 module.exports = async (req, res) => {
   const { url } = req.query
-  // TODO: url Validation Check
-  if (!url) return res.status(400).send('URL을 입력해주세요.')
+  const urlRegExp = new RegExp(/(http(s)?:\/\/).*/)
+  if (!url || !urlRegExp.test(url)) {
+    return res.status(400).json({
+      errorCode: 'ValidationError',
+      errorMessage: 'URL을 형식에 맞추어 입력해주세요.'
+    })
+  }
   try {
     const result = await new URL({
       originUrl: url,
