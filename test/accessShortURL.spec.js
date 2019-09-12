@@ -8,18 +8,16 @@ const URL = require('../model/url')
 chai.use(chaiHttp)
 chai.should()
 
-describe('accessShortURL Test', function () {
+describe('accessShortURL Test', () => {
   const originUrl = 'https://bigcar.kr'
-  let shortUrl = ''
+  const shortUrl = nanoId(9)
   before(async () => {
     // 테스트 전 Data 준비
     await URL.remove({})
     await new URL({
       originUrl,
-      shortUrl: nanoId(9)
+      shortUrl
     }).save()
-    const result = await URL.findOne({ originUrl })
-    shortUrl = result.shortUrl
   })
   it('정상적으로 되는지', async () => {
     const res = await chai.request(index).get(`/${shortUrl}`)

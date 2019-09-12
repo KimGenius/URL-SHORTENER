@@ -7,7 +7,7 @@ const URL = require('../model/url')
 chai.use(chaiHttp)
 chai.should()
 
-describe('createURL Test', function () {
+describe('createURL Test', () => {
   const url = 'https://bigcar.kr'
   before(async () => {
     // 테스트 전 Test Data Clear
