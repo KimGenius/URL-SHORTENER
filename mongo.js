@@ -2,7 +2,10 @@
 const mongoose = require('mongoose')
 
 module.exports = () => {
-  mongoose.connect('mongodb://localhost/url-shortener')
+  const dbName = process.env.NODE_ENV === 'test'
+    ? 'url-shortener-test'
+    : 'url-shortener'
+  mongoose.connect(`mongodb://localhost/${dbName}`)
   const db = mongoose.connection
   db.on('error', console.error)
   db.once('open', () => {

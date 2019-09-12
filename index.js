@@ -15,3 +15,5 @@ obj.map(v => {
 app.listen(3000, () => {
   console.log('URL 줄일 준비 완료!')
 })
+
+module.exports = app
