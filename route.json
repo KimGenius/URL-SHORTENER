@@ -1,0 +1,12 @@
+[
+  {
+    "path": "/register.json",
+    "method": "post",
+    "handler": "createURL.js"
+  },
+  {
+    "path": "/:shortUrl",
+    "method": "get",
+    "handler": "accessShortUrl.js"
+  }
+]
