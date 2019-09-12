@@ -8,5 +8,10 @@
     "path": "/:shortUrl",
     "method": "get",
     "handler": "accessShortURL.js"
+  },
+  {
+    "path": "/:shortUrl/stats",
+    "method": "get",
+    "handler": "getStateShortURL.js"
   }
 ]
