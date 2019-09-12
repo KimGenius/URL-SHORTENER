@@ -21,4 +21,8 @@ describe('createURL Test', function () {
     const res = await chai.request(index).post(`/register.json?url=${url}`)
     res.should.have.status(200)
   })
+  it('URL 형식이 아닌 경우', async () => {
+    const res = await chai.request(index).post(`/register.json?url=helloworld`)
+    res.should.have.status(400)
+  })
 })
