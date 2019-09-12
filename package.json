@@ -1,0 +1,22 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "URL을 짧고 간단하게",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KimGenius/URL-SHORTENER.git"
+  },
+  "keywords": [
+    "URL"
+  ],
+  "author": "GeniusK",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KimGenius/URL-SHORTENER/issues"
+  },
+  "homepage": "https://github.com/KimGenius/URL-SHORTENER#readme"
+}
