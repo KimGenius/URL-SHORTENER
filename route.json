@@ -7,6 +7,6 @@
   {
     "path": "/:shortUrl",
     "method": "get",
-    "handler": "accessShortUrl.js"
+    "handler": "accessShortURL.js"
   }
 ]
