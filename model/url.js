@@ -21,6 +21,10 @@ const URLSchema = new Schema({
   dateCreated: {
     type: Date,
     default: Date.now
+  },
+  useDate: {
+    type: Date,
+    default: Date.now
   }
 }, {
   versionKey: false

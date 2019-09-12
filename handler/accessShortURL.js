@@ -20,7 +20,11 @@ module.exports = async (req, res) => {
       errorMessage: '짧게 만든 주소는 9자리로 입력해주세요.'
     })
   }
-  const urlData = await URL.findOne({ shortUrl })
+  const urlData = await URL.findOneAndUpdate({
+    shortUrl
+  }, {
+    useDate: moment()
+  })
   if (!urlData) {
     return res.status(400).json({
       errorCode: 'ValidationError',
