@@ -1,4 +1,5 @@
 'use strict'
+const moment = require('moment-timezone')
 const URL = require('../model/url')
 const UrlStats = require('../model/urlStats')
 
@@ -28,7 +29,7 @@ module.exports = async (req, res) => {
   }
   await UrlStats.findOneAndUpdate({
     shortUrl,
-    at: '2019-09-12 01:00:00'
+    at: moment().format('YYYY-MM-DD HH:00:00')
   }, {
     $inc: { visits: 1 }
   }, {

@@ -23,6 +23,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "moment-timezone": "^0.5.26",
     "mongoose": "^5.7.0",
     "nanoid": "^2.1.1"
   },

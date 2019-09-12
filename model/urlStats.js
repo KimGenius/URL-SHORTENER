@@ -10,8 +10,7 @@ const Schema = mongoose.Schema
 const URLStatsSchema = new Schema({
   shortUrl: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   },
   at: {
     type: String,
