@@ -4,6 +4,7 @@ const URL = require('../model/url')
 
 module.exports = async (req, res) => {
   const { url } = req.query
+  // TODO: url Validation Check
   if (!url) return res.status(400).send('URL을 입력해주세요.')
   try {
     const result = await new URL({
